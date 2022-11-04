@@ -4,27 +4,29 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Rigidbody2D rb;
     private BoxCollider2D boxCollider;
-    private Vector3 moveDelta;
-    public int movementSpeed;
+    private Vector2 playerDirection;
+    Vector2 movement;
+
+    public float walkSpeed = 4f;
 
     void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
-
-        moveDelta = new Vector3(x, y, 0);
-
-        if (moveDelta.x > 0)
-            transform.localScale = Vector3.one;
-        else if (moveDelta.x < 0)
-            transform.localScale = new Vector3(-1, 1, 1);
-
-        transform.Translate(moveDelta * movementSpeed * Time.deltaTime);
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
     }
+
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + movement * walkSpeed * Time.fixedDeltaTime);
+    }
+
+    
 }
