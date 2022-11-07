@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,7 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   target: {fileID: 6790952933989964806, guid: b9b6b9095e2d43e4c874ce1d977bdcd6, type: 3}
-  minimumDistance: 2
+  retreatDistance: 0
+  stoppingDistance: 0
   projectile: {fileID: 8885105468269454929, guid: 6e5a145886469624fa6716046f8e5a7c, type: 3}
   timeBetweenShots: 2
 --- !u!50 &4960733484809581282
