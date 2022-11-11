@@ -99,10 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b98a520b23d8f945a5ebc9aec5e75ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 6
   rb: {fileID: 7999788413478839696}
   damage: 20
-  trackTime: 1.3
+  trackTime: 1.8
 --- !u!70 &3831705300597715360
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
