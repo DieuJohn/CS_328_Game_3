@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonPress : Interactable
+public class InteractSquare : Interactable
 {
     private bool Interacted = false;
     public Sprite interacted;

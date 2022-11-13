@@ -5,16 +5,29 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int health;
-    // Start is called before the first frame update
+    public bool holdingFood;
+    public string heldFood;
+
     void Start()
+    {
+    
+    }
+
+    void Update()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TakeFood(string foodType)
     {
-        
+        holdingFood = true;
+        heldFood = foodType;
+    }
+
+    public void DropFood()
+    {
+        holdingFood = false;
+        heldFood = "";
     }
 
     public void TakeDamage(int damage)
