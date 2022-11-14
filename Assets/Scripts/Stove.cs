@@ -15,7 +15,7 @@ public class Stove : Interactable
     private Player player;
 
     protected override void OnCollide(Collider2D coll)
-    {        
+    {
         if (coll.name == "Player" && Input.GetKey(KeyCode.E))
         {
             player = coll.GetComponent<Player>();
@@ -52,6 +52,7 @@ public class Stove : Interactable
                 timerIsRunning = false;
                 ready = true;
                 food = "Cooked " + food;
+                sprite.color = defaultColor;
             }
         }
     }
@@ -65,6 +66,7 @@ public class Stove : Interactable
             timerIsRunning = true;
             timer = cookTime;
             emptyAction.Invoke();
+            sprite.color = Color.red;
         }
         //Removes the ready flag and stored food item, gives player food.
         else if (ready && player.heldFood == "")

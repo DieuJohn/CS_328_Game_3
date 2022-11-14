@@ -8,15 +8,23 @@ public class Player : MonoBehaviour
     public bool holdingFood;
     public string heldFood;
     public int wallet;
+    public SpriteRenderer sprite;
 
     void Start()
     {
-    
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        
+        if (holdingFood)
+        {
+            sprite.color = Color.blue;
+        }
+        else
+        {
+            sprite.color = Color.cyan;
+        }
     }
 
     public void TakeFood(string foodType)

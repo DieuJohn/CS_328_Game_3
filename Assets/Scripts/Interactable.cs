@@ -7,10 +7,14 @@ public class Interactable : MonoBehaviour
     public ContactFilter2D filter;
     protected BoxCollider2D boxCollider;
     protected Collider2D[] hits = new Collider2D[10];
+    public SpriteRenderer sprite;
+    protected Color defaultColor;
 
     protected virtual void Start()
     {
+        sprite = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
+        defaultColor = sprite.color;
     }
 
     protected virtual void Update()

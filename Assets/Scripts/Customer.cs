@@ -27,6 +27,7 @@ public class Customer : Interactable
                 complete = true;
                 player.DropFood();
                 player.GainMoney(money);
+                sprite.color = Color.green;
             }
         }
     }
