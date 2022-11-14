@@ -7,6 +7,7 @@ public class MoneyToText : MonoBehaviour
 {
     private GameObject player;
     public TMP_Text moneyText;
+    public TMP_Text healthText;
     private Player playerComp;
 
     void Start()
@@ -19,5 +20,6 @@ public class MoneyToText : MonoBehaviour
     void Update()
     {
         moneyText.text = "Wallet: " + playerComp.wallet.ToString();
+        healthText.text = "Health: " + playerComp.health.ToString();
     }
 }

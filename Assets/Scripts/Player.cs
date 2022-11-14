@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int health;
+    public int health = 100;
     public bool holdingFood;
     public string heldFood;
     public int wallet;
@@ -24,6 +24,11 @@ public class Player : MonoBehaviour
         else
         {
             sprite.color = Color.cyan;
+        }
+
+        if (health < 0)
+        {
+            health = 100;
         }
     }
 
