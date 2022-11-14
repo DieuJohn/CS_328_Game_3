@@ -7,6 +7,7 @@ public class Customer : Interactable
     public bool complete = false;
     private Player player;
     public string order;
+    public int money = 10;
 
     protected override void OnCollide(Collider2D coll)
     {
@@ -25,6 +26,7 @@ public class Customer : Interactable
             {
                 complete = true;
                 player.DropFood();
+                player.GainMoney(money);
             }
         }
     }
