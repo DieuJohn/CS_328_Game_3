@@ -386,7 +386,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 1589763997}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 120
   m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -543,7 +543,7 @@ MonoBehaviour:
   timerRunning: 0
   timeText: {fileID: 841045671}
   RestartScene: {fileID: 715829040}
-  Player: {fileID: 0}
+  Player: {fileID: 1067214313}
 --- !u!1 &403060431
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,7 +1228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -294, y: 127}
+  m_AnchoredPosition: {x: -299, y: 128}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &841045670
@@ -1363,7 +1363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 280, y: 167}
+  m_AnchoredPosition: {x: 296, y: 175}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &852015967
@@ -2140,7 +2140,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 291, y: -174}
+  m_AnchoredPosition: {x: 311, y: -157}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1104195265
@@ -2595,7 +2595,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589763995}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -18}
+  m_LocalPosition: {x: 0, y: 0, z: -21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2837,7 +2837,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -292, y: 174}
+  m_AnchoredPosition: {x: -298, y: 174}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &1807579590 stripped
@@ -3118,16 +3118,7 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-    - target: {fileID: 6790952933989964811, guid: b9b6b9095e2d43e4c874ce1d977bdcd6, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.09375
-      objectReference: {fileID: 0}
-    - target: {fileID: 6790952933989964811, guid: b9b6b9095e2d43e4c874ce1d977bdcd6, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.09375
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6790952933989964811, guid: b9b6b9095e2d43e4c874ce1d977bdcd6, type: 3}
+    m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: b9b6b9095e2d43e4c874ce1d977bdcd6, type: 3}
 --- !u!1001 &6821710148639094097

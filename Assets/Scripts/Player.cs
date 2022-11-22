@@ -19,11 +19,11 @@ public class Player : MonoBehaviour
     {
         if (holdingFood)
         {
-            sprite.color = Color.blue;
+            sprite.color = Color.white;
         }
         else
         {
-            sprite.color = Color.cyan;
+            sprite.color = Color.blue;
         }
 
         if (health < 0)
