@@ -4,17 +4,20 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    //Base interactable script for all interactable scripts to inherit from.
     public ContactFilter2D filter;
     protected BoxCollider2D boxCollider;
     protected Collider2D[] hits = new Collider2D[10];
     public SpriteRenderer sprite;
-    protected Color defaultColor;
+    public GameObject foodSprite;
+    public Sprite newSprite;
+    protected Sprite defaultSprite;
 
     protected virtual void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
-        defaultColor = sprite.color;
+        defaultSprite = sprite.sprite;
     }
 
     protected virtual void Update()

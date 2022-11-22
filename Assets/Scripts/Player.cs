@@ -53,4 +53,9 @@ public class Player : MonoBehaviour
     {
         wallet += money;
     }
+
+    public void SetActive()
+    {
+        gameObject.SetActive(false);
+    }
 }

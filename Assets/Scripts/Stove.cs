@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Stove : Interactable
 {
+    //inherits from the iteractable script, has a changeable accepted food.
     public float cookTime;
     private float timer;
     public bool timerIsRunning = false;
     private bool ready = false;
     public string food;
-    public UnityEvent emptyAction;
-    public UnityEvent readyAction;
+    public string takenFood;
     private Player player;
-
+    //note: move to base interactable script 
     protected override void OnCollide(Collider2D coll)
     {
         if (coll.name == "Player" && Input.GetKey(KeyCode.E))
@@ -44,6 +43,7 @@ public class Stove : Interactable
             if (timer > 0)
             {
                 timer -= Time.deltaTime;
+                sprite.sprite = newSprite;
             }
             else
             {
@@ -52,23 +52,22 @@ public class Stove : Interactable
                 timerIsRunning = false;
                 ready = true;
                 food = "Cooked " + food;
-                sprite.color = defaultColor;
+                sprite.sprite = defaultSprite;
             }
         }
     }
 
     protected virtual void Interact(string heldFood)
     {
-        //Starts timer if player has a Wing and is not currently running.
-        if (timerIsRunning == false && heldFood == "Wing")
+        //Starts timer if player has food that is taken by the stove and takes their food..
+        if (timerIsRunning == false && heldFood == takenFood)
         {
             food = heldFood;
             timerIsRunning = true;
             timer = cookTime;
-            emptyAction.Invoke();
-            sprite.color = Color.red;
+            player.DropFood();
         }
-        //Removes the ready flag and stored food item, gives player food.
+        //Removes the ready flag and stored food item, gives player cooked food.
         else if (ready && player.heldFood == "")
         {
             ready = false;
