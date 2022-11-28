@@ -28,7 +28,9 @@ public class Customer : Interactable
                 player.DropFood();
                 player.GainMoney(money);
                 sprite.color = Color.green;
+                this.gameObject.SetActive(false);
             }
         }
     }
 }
+

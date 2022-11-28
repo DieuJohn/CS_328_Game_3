@@ -9,10 +9,11 @@ public class Player : MonoBehaviour
     public string heldFood;
     public int wallet;
     public SpriteRenderer sprite;
-
+    private GameObject customer;
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+        Instantiate(customer);
     }
 
     void Update()
