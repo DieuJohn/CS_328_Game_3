@@ -7,26 +7,16 @@ public class Player : MonoBehaviour
     public int health = 100;
     public bool holdingFood;
     public string heldFood;
-    public int wallet;
+    public int score;
     public SpriteRenderer sprite;
     private GameObject customer;
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-        Instantiate(customer);
     }
 
     void Update()
     {
-        if (holdingFood)
-        {
-            sprite.color = Color.white;
-        }
-        else
-        {
-            sprite.color = Color.blue;
-        }
-
         if (health < 0)
         {
             health = 100;
@@ -50,9 +40,13 @@ public class Player : MonoBehaviour
         health -= damage;
     }
 
-    public void GainMoney(int money)
+    public void GainMoney(int points)
     {
-        wallet += money;
+        score += points;
+        if (score > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", score);
+        }
     }
 
     public void SetActive()

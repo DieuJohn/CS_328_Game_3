@@ -8,6 +8,8 @@ public class MoneyToText : MonoBehaviour
     private GameObject player;
     public TMP_Text moneyText;
     public TMP_Text healthText;
+    public TMP_Text endScore;
+    public TMP_Text endHighScore;
     private Player playerComp;
 
     void Start()
@@ -16,10 +18,11 @@ public class MoneyToText : MonoBehaviour
         playerComp = player.GetComponent<Player>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        moneyText.text = "Wallet: " + playerComp.wallet.ToString();
+        moneyText.text = "Score: " + playerComp.score.ToString();
         healthText.text = "Health: " + playerComp.health.ToString();
+        endScore.text = "SCORE: " + playerComp.score.ToString();
+        endHighScore.text = $"HIGH SCORE:  {PlayerPrefs.GetInt("HighScore", 0)}";
     }
 }
