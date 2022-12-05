@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             transform.position = new Vector3(0, 0, 0);
+            health = 100;
         }
     }
 
