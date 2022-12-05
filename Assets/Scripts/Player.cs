@@ -17,9 +17,9 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (health < 0)
+        if (health <= 0)
         {
-            health = 100;
+            transform.position = new Vector3(0, 0, 0);
         }
     }
 
