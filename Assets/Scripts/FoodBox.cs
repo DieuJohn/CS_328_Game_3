@@ -7,7 +7,6 @@ public class FoodBox : Interactable
 {
     public UnityEvent interactAction;
 
-
     protected override void Interact()
     {
         interactAction.Invoke();

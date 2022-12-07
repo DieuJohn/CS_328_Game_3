@@ -39,7 +39,7 @@ public class Interactable : MonoBehaviour
 
     protected virtual void OnCollide(Collider2D coll)
     {
-        if (coll.name == "Player" && Input.GetKey(KeyCode.E))
+        if (coll.name == "Player" && (Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.X) || Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Return)))
         {
             player = coll.GetComponent<Player>();
             Interact();
