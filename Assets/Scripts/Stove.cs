@@ -11,16 +11,9 @@ public class Stove : Interactable
     private bool ready = false;
     public string food;
     public string takenFood;
-    private Player player;
+    private string heldFood;
     //note: move to base interactable script 
-    protected override void OnCollide(Collider2D coll)
-    {
-        if (coll.name == "Player" && Input.GetKey(KeyCode.E))
-        {
-            player = coll.GetComponent<Player>();
-            Interact(player.heldFood);
-        }
-    }
+
 
     protected override void Update()
     {
@@ -57,8 +50,9 @@ public class Stove : Interactable
         }
     }
 
-    protected virtual void Interact(string heldFood)
+    protected override void Interact()
     {
+        heldFood = player.heldFood;
         //Starts timer if player has food that is taken by the stove and takes their food..
         if (timerIsRunning == false && heldFood == takenFood)
         {

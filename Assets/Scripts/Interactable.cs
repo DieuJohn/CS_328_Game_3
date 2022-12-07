@@ -12,6 +12,7 @@ public class Interactable : MonoBehaviour
     public GameObject foodSprite;
     public Sprite newSprite;
     protected Sprite defaultSprite;
+    protected Player player;
 
     protected virtual void Start()
     {
@@ -38,6 +39,15 @@ public class Interactable : MonoBehaviour
 
     protected virtual void OnCollide(Collider2D coll)
     {
-        Debug.Log("Interacted with " + coll.name);
+        if (coll.name == "Player" && Input.GetKey(KeyCode.E))
+        {
+            player = coll.GetComponent<Player>();
+            Interact();
+        }
+    }
+
+    protected virtual void Interact()
+    {
+
     }
 }
