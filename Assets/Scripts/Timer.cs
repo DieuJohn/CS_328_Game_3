@@ -45,4 +45,8 @@ public class Timer : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timeText.text = string.Format("Timer: {00}:{1:00}", minutes, seconds);
     }
+    void addTime(int timeAdded)
+    {
+        timeRemaining += timeAdded;
+    }
 }

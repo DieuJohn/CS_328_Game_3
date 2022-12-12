@@ -1097,6 +1097,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5739441516365642824, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: foodIcon
+      value: 
+      objectReference: {fileID: 8791061738688807574, guid: 3792b8641a5e8d147a46d0118e7ca2b0, type: 3}
+    - target: {fileID: 5739441516365642824, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
       propertyPath: foodSprite
       value: 
       objectReference: {fileID: 6469228051558456278, guid: ccc0039d9e415a24787b61ea96e3db09, type: 3}
@@ -2593,6 +2597,10 @@ PrefabInstance:
       value: Cooked Pizza
       objectReference: {fileID: 0}
     - target: {fileID: 5739441516365642824, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: foodIcon
+      value: 
+      objectReference: {fileID: 8876638108219040803, guid: 8a265a9d9fca16147848b32ec2d7509d, type: 3}
+    - target: {fileID: 5739441516365642824, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
       propertyPath: foodSprite
       value: 
       objectReference: {fileID: 1026346795617035582, guid: 93c347802b094dd468c5584cf3087b5f, type: 3}
@@ -2868,6 +2876,10 @@ PrefabInstance:
       propertyPath: order
       value: Cooked Pizza
       objectReference: {fileID: 0}
+    - target: {fileID: 5739441516365642824, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: foodIcon
+      value: 
+      objectReference: {fileID: 8876638108219040803, guid: 8a265a9d9fca16147848b32ec2d7509d, type: 3}
     - target: {fileID: 5739441516365642824, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
       propertyPath: foodSprite
       value: 
@@ -3539,6 +3551,14 @@ PrefabInstance:
     - target: {fileID: 5608916962425233891, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739441516365642824, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: foodIcon
+      value: 
+      objectReference: {fileID: 8791061738688807574, guid: 3792b8641a5e8d147a46d0118e7ca2b0, type: 3}
+    - target: {fileID: 5739441516365642824, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: timeAdded
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5739441516365642824, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
       propertyPath: foodSprite

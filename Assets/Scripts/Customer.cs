@@ -7,11 +7,16 @@ public class Customer : Interactable
     public bool complete = false;
     public string order;
     public int money = 10;
+    public int timeAdded;
 
-
+    public GameObject foodIcon;
 
     protected override void Interact()
     {
+        Timer timer = GameObject.Find("GameManager").GetComponent<Timer>();
+        GameObject icon = Instantiate(this.foodIcon, this.transform) as GameObject;
+        icon.transform.localPosition = new Vector2(icon.transform.localPosition.x + 1, icon.transform.localPosition.y - 2);
+
         if (!complete)
         {
             if (player.heldFood == order)
@@ -21,6 +26,7 @@ public class Customer : Interactable
                 player.GainMoney(money);
                 sprite.color = Color.green;
                 this.gameObject.SetActive(false);
+                Destroy(icon);
             }
         }
     }
