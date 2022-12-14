@@ -10,6 +10,11 @@ public class Player : MonoBehaviour
     public int score;
     public SpriteRenderer sprite;
     private GameObject customer;
+
+    public SpriteRenderer foodSprite;
+    public Sprite waffle;
+    public Sprite wing;
+
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -28,17 +33,43 @@ public class Player : MonoBehaviour
     {
         holdingFood = true;
         heldFood = foodType;
+        FoodSprite(heldFood);
+    }
+
+    public void FoodSprite(string foodType)
+    {
+        if (foodType == "Waffle")
+        {
+            foodSprite.sprite = waffle;
+        }
+        else if (foodType == "Wing")
+        {
+            foodSprite.sprite = wing;
+        }
+        else
+        {
+            foodSprite.sprite = null;
+        }
     }
 
     public void DropFood()
     {
         holdingFood = false;
         heldFood = "";
+        FoodSprite(heldFood);
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
+        sprite.color = new Color(255, 0, 0);
+        StartCoroutine(damageFlash());
+
+    }
+    IEnumerator damageFlash()
+    {
+        yield return new WaitForSeconds(0.1f);
+        sprite.color = new Color(255, 255, 255);
     }
 
     public void GainMoney(int points)
