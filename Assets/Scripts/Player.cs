@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public SpriteRenderer sprite;
     private GameObject customer;
     public float scoreReduction;
+    public GameObject buttonPrompt;
 
     public SpriteRenderer foodSprite;
     public Sprite waffle;
@@ -29,6 +30,8 @@ public class Player : MonoBehaviour
             health = 100;
             score -= (int)(score * scoreReduction);
         }
+
+        hideButtonPrompt();
     }
 
     public void TakeFood(string foodType)
@@ -86,5 +89,15 @@ public class Player : MonoBehaviour
     public void SetActive()
     {
         gameObject.SetActive(false);
+    }
+
+    public void displayButtonPrompt()
+    {
+        buttonPrompt.SetActive(true);
+    }
+
+    public void hideButtonPrompt()
+    {
+        buttonPrompt.SetActive(false);
     }
 }

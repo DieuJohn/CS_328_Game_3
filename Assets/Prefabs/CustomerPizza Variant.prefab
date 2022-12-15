@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4978443617079304613
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2677072478957201180, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_Name
+      value: CustomerPizza
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698152902087285650, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698152902087285650, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698152902087285650, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698152902087285650, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698152902087285650, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698152902087285650, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698152902087285650, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698152902087285650, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698152902087285650, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698152902087285650, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698152902087285650, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698152902087285650, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2698152902087285650, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305581724454663589, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.09375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4305581724454663589, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.09375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608916962425233891, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: be255113151cf564ea0f48d8dc89a053, type: 3}
+    - target: {fileID: 5608916962425233891, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608916962425233891, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608916962425233891, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739441516365642824, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: money
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739441516365642824, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: order
+      value: Cooked Pizza
+      objectReference: {fileID: 0}
+    - target: {fileID: 5739441516365642824, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: foodIcon
+      value: 
+      objectReference: {fileID: 8876638108219040803, guid: 8a265a9d9fca16147848b32ec2d7509d, type: 3}
+    - target: {fileID: 5739441516365642824, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
+      propertyPath: foodSprite
+      value: 
+      objectReference: {fileID: 1026346795617035582, guid: 93c347802b094dd468c5584cf3087b5f, type: 3}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7223952cd6a569f498335c00e34b12ff, type: 3}
