@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public int score;
     public SpriteRenderer sprite;
     private GameObject customer;
+    public float scoreReduction;
 
     public SpriteRenderer foodSprite;
     public Sprite waffle;
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(0, 0, 0);
             health = 100;
+            score -= (int)(score * scoreReduction);
         }
     }
 
