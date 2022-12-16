@@ -9,11 +9,13 @@ public class Customer : Interactable
     public int money = 10;
 
     public GameObject foodIcon;
+    private AudioSource cashSound;
 
     protected override void Interact()
     {
         GameObject icon = Instantiate(this.foodIcon, this.transform) as GameObject;
         icon.transform.localPosition = new Vector2(icon.transform.localPosition.x + 1, icon.transform.localPosition.y - 2);
+        cashSound = GetComponent<AudioSource>();
 
         if (!complete)
         {
@@ -23,6 +25,7 @@ public class Customer : Interactable
                 player.DropFood();
                 player.GainMoney(money);
                 sprite.color = Color.green;
+                cashSound.Play();
                 this.gameObject.SetActive(false);
                 Destroy(icon);
             }

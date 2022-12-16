@@ -103,10 +103,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletHit: {fileID: 8300000, guid: 22ff04be9f4437d41b6cacb4e6695c5b, type: 3}
   playerHurt: {fileID: 8300000, guid: 656c1e1026ed00b4fa13159f2add59c9, type: 3}
-  speed: 13
+  speed: 10
   rb: {fileID: 0}
   damage: 10
-  invisible: {fileID: 7373585733493811677}
 --- !u!50 &4906358935703698013
 Rigidbody2D:
   serializedVersion: 4

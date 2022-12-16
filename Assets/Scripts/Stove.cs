@@ -12,6 +12,8 @@ public class Stove : Interactable
     public string food;
     public string takenFood;
     private string heldFood;
+    private GameObject storedObject;
+    
     //note: move to base interactable script 
 
 
@@ -60,6 +62,8 @@ public class Stove : Interactable
             timerIsRunning = true;
             timer = cookTime;
             player.DropFood();
+            storedObject = Instantiate(foodSprite, this.transform);
+            
         }
         //Removes the ready flag and stored food item, gives player cooked food.
         else if (ready && player.heldFood == "")
@@ -67,6 +71,7 @@ public class Stove : Interactable
             ready = false;
             player.TakeFood(food);
             food = "";
+            Destroy(storedObject);
         }
     }
 }

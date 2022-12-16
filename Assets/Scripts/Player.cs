@@ -11,15 +11,19 @@ public class Player : MonoBehaviour
     public SpriteRenderer sprite;
     private GameObject customer;
     public float scoreReduction;
-    public GameObject buttonPrompt;
+    public GameObject wingPrompt;
+    public GameObject wafflePrompt;
 
     public SpriteRenderer foodSprite;
     public Sprite waffle;
     public Sprite wing;
 
+    private AudioSource failSound;
+
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+        failSound = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -29,9 +33,8 @@ public class Player : MonoBehaviour
             transform.position = new Vector3(0, 0, 0);
             health = 100;
             score -= (int)(score * scoreReduction);
+            failSound.Play();
         }
-
-        hideButtonPrompt();
     }
 
     public void TakeFood(string foodType)
@@ -39,6 +42,7 @@ public class Player : MonoBehaviour
         holdingFood = true;
         heldFood = foodType;
         FoodSprite(heldFood);
+        displayButtonPrompt();
     }
 
     public void FoodSprite(string foodType)
@@ -59,6 +63,7 @@ public class Player : MonoBehaviour
 
     public void DropFood()
     {
+        hideButtonPrompt();
         holdingFood = false;
         heldFood = "";
         FoodSprite(heldFood);
@@ -93,11 +98,25 @@ public class Player : MonoBehaviour
 
     public void displayButtonPrompt()
     {
-        buttonPrompt.SetActive(true);
+        if(heldFood == "Wing" || heldFood == "Cooked Wing")
+        {
+            wingPrompt.SetActive(true);
+        }
+        else if (heldFood == "Pizza" || heldFood == "Cooked Pizza")
+        {
+            wafflePrompt.SetActive(true);
+        }
     }
 
     public void hideButtonPrompt()
     {
-        buttonPrompt.SetActive(false);
+        if (heldFood == "Wing" || heldFood == "Cooked Wing")
+        {
+            wingPrompt.SetActive(false);
+        }
+        else if (heldFood == "Pizza" || heldFood == "Cooked Pizza")
+        {
+            wafflePrompt.SetActive(false);
+        }
     }
 }
